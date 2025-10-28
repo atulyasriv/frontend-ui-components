@@ -1,0 +1,51 @@
+body {
+  background-color: rgb(67, 4, 38);
+  min-height: 100vh;
+  max-width: 50rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabs {
+  display: inline; /* ✅ this is fine */
+  width: 500px;
+}
+
+.tabs label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  background-color: rgb(136, 59, 89);
+  text-align: center;
+  color: rgb(249, 249, 249);
+  transition: background-color ease 1s; /* ✅ corrected transition */
+}
+
+.tab {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: rgb(189, 166, 180);
+  box-shadow: -3px 7px 5px rgb(46, 15, 21);
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  background: #bdb2b9; /* active tab label */
+  color: black;
+}
+
+input:checked + label + .tab {
+  display: block;
+  transform: translateY(-10px); /* this is what causes the FLIP/UP EFFECT */
+  transition: 0.2s ease-in-out;
+}
