@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #000; /* pure cinematic black */
+  font-family: "Poppins", sans-serif;
+}
+
+.profile_card {
+  width: 320px;
+  padding: 35px 40px;
+  border-radius: 15px;
+  background: #141414; /* Netflix dark card */
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 50px rgba(255, 0, 0, 0.15); /* subtle red glow */
+  transition: 0.3s ease-in-out;
+}
+
+.profile_card:hover {
+  position: relative;
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 70px rgba(255, 0, 0, 0.25);
+}
+
+.user_img {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 49%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 3px solid #e50914; /* Netflix red */
+}
+
+.user_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user_details h5 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.user_details span {
+  font-size: 13px;
+  color: #bbbbbb;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.user_details a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 35px;
+  background: #e50914; /* Netflix button red */
+  border-radius: 25px;
+  margin-top: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.user_details a:hover {
+  background: #f6121d;
+  transform: scale(1.05);
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px; /* spacing between icons */
+  margin-top: 25px;
+  list-style: none; /* remove bullets ✅ */
+}
+
+.social-media-icons li {
+  text-align: center;
+}
