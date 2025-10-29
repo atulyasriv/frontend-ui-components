@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #210303;
+}
+
+.kinetic {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.kinetic::before,
+.kinetic::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom-color: white; /* default triangle color */
+  animation: rotA 2s linear infinite;
+}
+
+/* Second Triangle */
+.kinetic::before {
+  transform: rotate(90deg);
+  border-bottom-color: crimson; /* second triangle color */
+  animation: rotB 2s linear infinite;
+}
+
+/* First Triangle Flip Animation */
+@keyframes rotA {
+  0%,
+  25% {
+    transform: rotate(0deg);
+  }
+  50%,
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Second Triangle Flip Animation */
+@keyframes rotB {
+  0%,
+  25% {
+    transform: rotate(90deg);
+  }
+  50%,
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(450deg);
+  }
+}
